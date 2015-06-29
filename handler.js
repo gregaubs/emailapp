@@ -7,10 +7,17 @@ var home = function(request, reply){
     console.log('request handler for "/"');
     reply.file('views/index.html');
 }
- 
+
+var postForm = function (request, reply){
+	console.log('request handler for "postForm"');
+	console.log('payload: ', request.payload);
+	model.saveForm(request.payload);
+	reply('postForm received');
+}
 
 
 module.exports = {
-	home: home
+	home: home,
+	postForm: postForm
 }
 

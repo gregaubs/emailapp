@@ -32,11 +32,19 @@ server.connection({
     server.route({          
         method: 'GET',
         path: '/',
-        handler: handler.home,
+        handler: handler.home
     });
 
    
-
+//Form POST
+    server.route({
+        method: 'POST',
+        path: '/postform',
+        config: { 
+            handler: handler.postForm,
+            payload: {output: 'data', parse: true}
+        }
+    })
 
 //** RUNNING THE SERVER **//
 
