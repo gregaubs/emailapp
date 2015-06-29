@@ -35,6 +35,21 @@ server.connection({
         handler: handler.home
     });
 
+
+//View
+    server.route({          
+        method: 'GET',
+        path: '/view',
+        handler: handler.view
+    });
+
+//Get data
+    server.route({          
+        method: 'GET',
+        path: '/getdata',
+        handler: handler.getData
+    });
+
    
 //Form POST
     server.route({
