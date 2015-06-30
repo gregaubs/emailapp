@@ -24,7 +24,10 @@
     "mongodb": "^2.0.24",
     "mongojs": "^0.18.2",
     "nodemon": "^1.3.7",
-    "shortid": "^2.2.2"
+    "realurl": "^0.1.3",
+    "request": "^2.58.0",
+    "shortid": "^2.2.2",
+    "twitter": "^1.2.5"
   },
   "directories": {
     "test": "test"

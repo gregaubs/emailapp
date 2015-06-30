@@ -1,4 +1,5 @@
 var model = require('./model.js');
+var twitter = require('./twitter.js');
 var jade = require('jade');
 var path = __dirname + '/views/index.jade';
 var fn = jade.compileFile(path);
@@ -35,6 +36,12 @@ var sendId = function (request, reply){
 //TWITTER FUNCTIONS
 function twitterRequestHeadlines (record) {
 	console.log('twitterRequestHeadlines, ', record);
+	var tag1 = record[0].tag1,
+		tag2 = record[0].tag2,
+		tag3 = record[0].tag3
+
+	twitter.test();
+		
 		
 }
 
