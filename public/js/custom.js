@@ -44,21 +44,51 @@ $(document).ready(function(){
 
 	function buildRow (obj, callback) {
 		var row = '<div class="view-table-row row">';
-		var rowFirstname = '<div class="col s2">'+obj.firstname+'</div>';
+		var rowFirstname = '<div class="col s2 firstname">'+obj.firstname+'</div>';
 		var rowLastname = '<div class="col s2">'+obj.lastname+'</div>';
 		var rowTag1 = '<div class="col s1">'+obj.tag1+'</div>';
 		var rowTag2 = '<div class="col s1">'+obj.tag2+'</div>';
 		var rowTag3 = '<div class="col s1">'+obj.tag3+'</div>';
 		var rowEmail = '<div class="col s2">'+obj.email+'</div>';
-		var rowButton = '<div class="col s3"><button class="btn waves-effect waves-light" type="submit" value="'+ obj._id +'" name="action">Send<i class="material-icons">send</i></button>';
+		var rowButton = '<div class="col s3" id="send"><button class="btn waves-effect waves-light send-button" onclick="sendButton(this)" id="send-button" type="submit" value="'+ obj._id +'" name="action">Send<i class="material-icons">send</i></button>';
 		var closingDiv = '</div>';
 		var completeRow = row + rowFirstname + rowLastname + rowTag1 + rowTag2 + rowTag3 
 		+ rowEmail + rowButton + closingDiv;
 		callback(completeRow);
 	}
 
-				
+	//SEND BUTTON CLICKED
+	// $(".send-button-div").click(function(){
+	// 	console.log($(this).attr("value"));
+	// 	console.log('123');
+			
+			
+	// });
 
+	// $(".firstname").click(function () {
+	// 	console.log('button clicked');
+			
+	// })
+	
+	$('.send-button').on("click", function(){
+		console.log('delegeted');
+			
+	})
+
+		$('.firstname').on("click", function(){
+		console.log('delegeted');
+			
+	})
+
+		$('#send').on("click", function(){
+		alert('send');
+			
+	})
+
+	function sendButton () {
+		console.log('sendbutton function');
+			
+	}
 
 //end
 });

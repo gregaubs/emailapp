@@ -31,15 +31,48 @@
 
 
 
+		<script type="text/javascript">
+		function sendButton(button){
+			console.log(button.value);
+			var ajaxString = "/sendId" + "?id="+button.value;
 
-		
+			console.log(ajaxString);
+
+			var xmlhttp;
+			if (window.XMLHttpRequest)
+			  {// code for IE7+, Firefox, Chrome, Opera, Safari
+			  xmlhttp=new XMLHttpRequest();
+			  }
+			else
+			  {// code for IE6, IE5
+			  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			  }
+			xmlhttp.onreadystatechange=function()
+			  {
+			  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			    {
+					console.log('ajax js');
+				    				    }
+			  };
+			xmlhttp.open("GET",ajaxString,true);
+			xmlhttp.send();
+		}
+				
+
+
+		</script>
+
 		 <!-- Jquery -->
 		<script src= "//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 		<!-- Materialize	 -->
-		 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+		 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script> -->
+		 <!-- <script src="/public/js/materialize.js"></script> -->
+
 
 		<!-- Custom JS -->
 		<script src="/public/js/custom.js"></script>
+
+
 	</body>
 </html>

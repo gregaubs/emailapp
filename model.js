@@ -1,5 +1,6 @@
 
 var db = require ('mongojs').connect('mongodb://lexoo:lexoo@ds036648.mongolab.com:36648/lexoo', ['contacts']);
+var oid = require("mongodb").ObjectID;
 
 function saveForm(object){
 	console.log('MODEL saveForm triggered');
@@ -10,24 +11,21 @@ function saveForm(object){
 }
 
 function getData(reply){
-	// db.contacts.find({},function(error, data){
-	// 	if( err || !data ) {
-	// 		console.log("No data retrieved");
-	// 	}
-	// 	else {
-	// 		reply(data);
-	// 	}
-	// });
 	var data = db.contacts.find(function(err,data){
-		console.log('data is....' , data);
-		console.log('data 1 is )))))', data[0]);
 		reply(data);
 	});
 }
 
+function getRecord(recordId, callback) {
+	var record = db.contacts.find({_id: oid(recordId)}, function(err, record){
+		callback(record);
+	})
+
+}
 
 
 module.exports = {
 	saveForm: saveForm,
-	getData: getData
+	getData: getData,
+	getRecord: getRecord
 }

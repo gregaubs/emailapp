@@ -61,6 +61,15 @@ server.connection({
         }
     })
 
+//Form POST
+    server.route({
+        method: 'GET',
+        path: '/sendId',
+        handler: handler.sendId
+    })
+
+
+
 //** RUNNING THE SERVER **//
 
 server.start(function () {

@@ -25,10 +25,27 @@ var getData = function(request, reply){
 	model.getData(reply);
 }
 
+var sendId = function (request, reply){
+	console.log('request handler for "sendId"');
+	console.log('ID of clicked button is...', request.query.id);
+	model.getRecord(request.query.id, twitterRequestHeadlines);		
+}
+
+
+//TWITTER FUNCTIONS
+function twitterRequestHeadlines (record) {
+	console.log('twitterRequestHeadlines, ', record);
+		
+}
+
+
+
+
 module.exports = {
 	home: home,
 	postForm: postForm,
 	view: view,
-	getData: getData
+	getData: getData,
+	sendId: sendId
 }
 
