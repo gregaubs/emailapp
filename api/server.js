@@ -7,7 +7,7 @@ var handler = require('../handler.js');
 
 /* $lab:coverage:off$ */
 server.connection({
-	host: "localhost",
+	host: "0.0.0.0",
 	port: process.env.PORT || 8000
 });
 /* $lab:coverage:on$ */
