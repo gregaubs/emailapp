@@ -1,5 +1,6 @@
 var model = require('./model.js');
-var twitter = require('./twitter.js');
+var twitterApi = require('./twitterapi.js');
+var guardian = require('./guardian.js');
 var jade = require('jade');
 var path = __dirname + '/views/index.jade';
 var fn = jade.compileFile(path);
@@ -29,7 +30,7 @@ var getData = function(request, reply){
 var sendId = function (request, reply){
 	console.log('request handler for "sendId"');
 	console.log('ID of clicked button is...', request.query.id);
-	model.getRecord(request.query.id, twitterRequestHeadlines);		
+	model.getRecord(request.query.id, buildHeadlinesArray);		
 }
 
 
@@ -39,13 +40,25 @@ function twitterRequestHeadlines (record) {
 	var tag1 = record[0].tag1,
 		tag2 = record[0].tag2,
 		tag3 = record[0].tag3
-
-	twitter.test();
+	twitterApi.getTweets(tag1, tag2, tag3);
 		
 		
 }
 
+//GUARDIAN FUNCTIONS
+function buildHeadlinesArray (record) {
+	console.log('guardian api called: ', record);
+	var tag1 = record[0].tag1,
+		tag2 = record[0].tag2,
+		tag3 = record[0].tag3
+		tagArray = [tag1, tag2, tag3]
+	guardian.getHeadlines(tagArray);
+}
 
+function mandrill (headlinesArray){
+	console.log('mandrill:....', headlinesArray);
+		
+}
 
 
 module.exports = {
