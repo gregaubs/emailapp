@@ -1,9 +1,8 @@
 var model = require('./model.js');
 var twitterApi = require('./twitterapi.js');
 var guardian = require('./guardian.js');
-var jade = require('jade');
-var path = __dirname + '/views/index.jade';
-var fn = jade.compileFile(path);
+
+
 
 var home = function(request, reply){
     console.log('request handler for "/"');
@@ -55,10 +54,7 @@ function buildHeadlinesArray (record) {
 	guardian.getHeadlines(tagArray);
 }
 
-function mandrill (headlinesArray){
-	console.log('mandrill:....', headlinesArray);
-		
-}
+
 
 
 module.exports = {
