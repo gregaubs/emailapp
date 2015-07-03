@@ -1,3 +1,40 @@
 .view-table-header {
 	border-bottom: 1px solid black;
+	font-weight: bold;
+	margin-top: 30px;
+}
+
+.view-table-row {
+	border-bottom: 1px solid rgb(240, 239, 239);
+}
+
+.homepage-h1 {
+	font-family: Helvetica;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color:white;
+	margin: 23px 0px!important;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.homepage-nav-li {
+	font-family: Helvetica;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	margin: 0 70px;
+}
+
+nav {
+	background-color: #474747;
+}
+
+.brand-logo {
+	margin-left: 20px;
+}
+
+.send-button {
+	margin-bottom:16px;
+	height: 40px;
+
 }

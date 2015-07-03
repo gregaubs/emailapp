@@ -10,23 +10,49 @@
 	</head>
 	<body>
 		<div class="homepage-nav-container row">
-			<h1 class="homepage-h1 col s4"> Lexoo Email App</h1>
-			<ul class="homepage-nav-ul col s8">
-				<li><a href= "/">New</a></li>
-				<li><a href="/view">View All</a></li>
-			</ul>
-		</div>
-		<div class="view-table-container">
-			<div class="view-table-header row">
-				<div class="col s2">Firstname</div>
-				<div class="col s2">Surname</div>
-				<div class="col s1">Tag 1</div>
-				<div class="col s1">Tag 2</div>
-				<div class="col s1">Tag 3</div>
-				<div class="col s2">Email</div>
-				<div class="col s3">SEND</div>
+			<nav>
+			    <div class="nav-wrapper">
+			      <a href="/" class="brand-logo"><h1 class="homepage-h1">Lexoo Email App</h1></a>
+			      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+			      <ul class="right hide-on-med-and-down homepage-nav-ul">
+			        <li class="homepage-nav-li"><a href="/view">View All </a></li>
+			        <li class="homepage-nav-li"><a href="/">New</a></li>
+
+			      </ul>
+			      <ul class="side-nav" id="mobile-demo">
+			        <li><a href="/view">View All </a></li>
+			        <li><a href="/">New</a></li>
+			      </ul>
+			    </div>
+			</nav>
+
+			<div class="view-table-container">
+				<div class="view-table-header row">
+					<div class="col s2">Firstname</div>
+					<div class="col s2">Surname</div>
+					<div class="col s1">Tag 1</div>
+					<div class="col s1">Tag 2</div>
+					<div class="col s1">Tag 3</div>
+					<div class="col s3">Email</div>
+					<div class="col s2">SEND</div>
+				</div>
 			</div>
-		</div>
+			<div class="row center-align">
+				<div class="preloader-wrapper big active">
+					<div class="spinner-layer spinner-blue">
+						<div class="circle-clipper left">
+							<div class="circle"></div>
+						</div>
+						<div class="gap-patch">
+							<div class="circle"></div>
+						</div>
+						<div class="circle-clipper right">
+							<div class="circle"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 
 
 

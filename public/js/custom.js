@@ -1,6 +1,10 @@
 $(document).ready(function(){
 
 	var url = window.location.href; 
+	//Mobile button
+	 $(".button-collapse").sideNav();
+	 //Materialise form
+	 $('select').material_select();
 
 	//FORM SUBMISSION
 	$("form").submit(function(e) {
@@ -20,7 +24,8 @@ $(document).ready(function(){
 			    email: 		$('#email').val()
 			},
 			success: function(response){
-				console.log('ajax success, response is: ',response);	
+				console.log('ajax success, response is: ',response);
+				window.location = "/view";	
 			}
 		})
 	});
@@ -38,6 +43,7 @@ $(document).ready(function(){
 					);			
 				});
 			}
+        	$('.preloader-wrapper').css('display','none');
         });
 	}
 
@@ -49,8 +55,8 @@ $(document).ready(function(){
 		var rowTag1 = '<div class="col s1">'+obj.tag1+'</div>';
 		var rowTag2 = '<div class="col s1">'+obj.tag2+'</div>';
 		var rowTag3 = '<div class="col s1">'+obj.tag3+'</div>';
-		var rowEmail = '<div class="col s2">'+obj.email+'</div>';
-		var rowButton = '<div class="col s3" id="send"><button class="btn waves-effect waves-light send-button" onclick="sendButton(this)" id="send-button" type="submit" value="'+ obj._id +'" name="action">Send<i class="material-icons">send</i></button>';
+		var rowEmail = '<div class="col s3">'+obj.email+'</div>';
+		var rowButton = '<div class="col s2" id="send"><a href= "/confirmation"><button class="btn waves-effect waves-light send-button" onclick="sendButton(this)" id="send-button" type="submit" value="'+ obj._id +'" name="action">Send <i class="material-icons">send</i></button></a>';
 		var closingDiv = '</div>';
 		var completeRow = row + rowFirstname + rowLastname + rowTag1 + rowTag2 + rowTag3 
 		+ rowEmail + rowButton + closingDiv;

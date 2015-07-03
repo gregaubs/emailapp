@@ -43,6 +43,13 @@ server.connection({
         handler: handler.view
     });
 
+//Confirmation
+    server.route({          
+        method: 'GET',
+        path: '/confirmation',
+        handler: handler.confirmation
+    });
+
 //Get data
     server.route({          
         method: 'GET',

@@ -10,14 +10,6 @@
 	</head>
 	<body>
 		<div class="homepage-nav-container row">
-			<!-- <h1 class="homepage-h1 col s4"> Lexoo Email App</h1> -->
-<!-- 			<nav>
-				<ul class="homepage-nav-ul col s8">
-					<li class="homepage-nav-li"><a href= "/">New</a></li>
-					<li class="homepage-nav-li"><a href="/view">View All</a></li>
-				</ul>
-			</nav> -->
-
 			<nav>
 			    <div class="nav-wrapper">
 			      <a href="/" class="brand-logo"><h1 class="homepage-h1">Lexoo Email App</h1></a>
@@ -33,36 +25,15 @@
 			      </ul>
 			    </div>
 			</nav>
-
 		</div>
 
 		<div class="row">
-			<form class="col s6 offset-s3 center-align" action="/view">
-				<div class="input-field col s12">
-				  	<input placeholder="First Name" id="firstname" type="text" class="validate">
-				</div>
-				<div class="input-field col s12">
-				  	<input placeholder="Last Name" id="lastname" type="text" class="validate">
-				</div>
-				<div class="input-field col s12">
-				  	<input placeholder="Tag 1" id="tag1" type="text" class="validate">
-				</div>
-				<div class="input-field col s12">
-				  	<input placeholder="Tag 2" id="tag2" type="text" class="validate">
-				</div>
-				<div class="input-field col s12">
-				  	<input placeholder="Tag 3" id="tag3" type="text" class="validate">
-				</div>
-			    <div class="input-field col s12">
-			      <input id="email" type="email" placeholder="Email Address"class="validate">
-			      <label for="email" data-error="wrong" data-success="right"></label>
-			    </div>
-				<!-- <a href="/view"> -->
-					<button class="btn waves-effect waves-light send-button" type="submit" name="action">Save
-					    <i class="material-icons">send</i>
-					</button>
-				<!-- </a> -->
-			</form>
+			<div class="col s6 offset-s3 center-align">
+				<p>Email has been sent!</p>
+				<p>(Please note: if you sent it to a Gmail address, it may take some time to reach your inbox. In testing, this time ranged between 5 and 50 minutes).</p>
+				<a href="/view"><button class="btn waves-effect waves-light send-button" type="submit" name="action">Back
+				</button></a>
+			</div>
 
 		</div>
 

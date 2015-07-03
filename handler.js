@@ -14,6 +14,11 @@ var view = function(request, reply){
     reply.file('views/view.html');
 }
 
+var confirmation = function(request, reply){
+    console.log('request handler for "/confirmation"');
+    reply.file('views/confirmation.html');
+}
+
 var postForm = function (request, reply){
 	console.log('request handler for "postForm"');
 	console.log('payload: ', request.payload);
@@ -61,6 +66,7 @@ module.exports = {
 	home: home,
 	postForm: postForm,
 	view: view,
+	confirmation: confirmation,
 	getData: getData,
 	sendId: sendId
 }

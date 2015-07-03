@@ -2,25 +2,6 @@ var request = require('request');
 var async = require("async");
 var mandrill = require('./mandrill.js');
 
-
-
-
-// function getHeadlines(tagArray){
-// 	for (var i=0; i<tagArray.length; i++){
-// 		var headlinesArray = [];
-// 		// var headlineObject = {};
-// 		var baseUrl = "http://content.guardianapis.com/search?q=" + tagArray[i] + "&api-key=jfrkfza276q5uz48kgwsrmp3";
-// 	    request(baseUrl, function (error, response, body) {
-// 	        if (!error && response.statusCode == 200) {
-// 	          var parsedResults = JSON.parse(body).response.results;
-// 	          // console.log('parsed results...', parsedReults);
-// 	          createTwoHeadlines(parsedResults, headlinesArray, tagArray);
-// 	        }
-// 	    })
-// 	}
-// }
-
-
 var headlinesArray = [];
 
 function getHeadlines(tagArray){
