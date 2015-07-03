@@ -2,7 +2,7 @@ var model = require('./model.js');
 var twitterApi = require('./twitterapi.js');
 var guardian = require('./guardian.js');
 
-
+var emailAddress = '';
 
 var home = function(request, reply){
     console.log('request handler for "/"');
@@ -56,7 +56,9 @@ function buildHeadlinesArray (record) {
 		tag2 = record[0].tag2,
 		tag3 = record[0].tag3
 		tagArray = [tag1, tag2, tag3]
-	guardian.getHeadlines(tagArray);
+
+	emailAddress = record[0].email;
+	guardian.getHeadlines(tagArray, emailAddress);
 }
 
 

@@ -7,7 +7,7 @@ var async = require("async");
 var headLinesString = '';
     
 
-function buildHeadlinesString (headlinesArray){
+function buildHeadlinesString (headlinesArray, emailAddress){
     console.log('*** headLinestring START ,', headLinesString);
     console.log('*** headLinestring START 2 ,', headLinesString);
 
@@ -21,7 +21,7 @@ function buildHeadlinesString (headlinesArray){
               
         // console.log('reached sending stage');
             
-		sendEmail();
+		sendEmail(emailAddress);
 	})		
 }
 
@@ -38,7 +38,7 @@ function buildHeadline (object, key, callback){
 }
 
 
-function sendEmail () {
+function sendEmail (emailAddress) {
     var email1 = fs.readFileSync('views/email1.html').toString();
     var email2 = fs.readFileSync('views/email2.html').toString();
     	
@@ -51,7 +51,7 @@ function sendEmail () {
         "from_email": "gaj.aubert@gmail.com",
         "from_name": "Lexoo",
         "to": [{
-                "email": 'greg.aubert@yahoo.co.uk',
+                "email": emailAddress,
                 "name": "Lexoo",
                 "type": "to"
             }],

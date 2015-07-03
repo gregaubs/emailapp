@@ -4,12 +4,12 @@ var mandrill = require('./mandrill.js');
 
 var headlinesArray = [];
 
-function getHeadlines(tagArray){
+function getHeadlines(tagArray, emailAddress){
 
 	async.forEachOf(tagArray, requestApi, function(err){
 		if (err) console.error(err.message);
 		console.log('async reached');
-		mandrill.buildHeadlinesString(headlinesArray);
+		mandrill.buildHeadlinesString(headlinesArray, emailAddress);
 
 
 	})
